@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+section,
+article,
+footer {
+  display: block;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  font-family: "Hachi Maru Pop", cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+nav {
+  background-color: skyblue;
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  width: 100%;
+}
+
+.nav-link,
+.nav-header,
+.nav-toggle {
+  text-align: center;
+  display: block;
+  padding: 0.5rem 0;
+  color: darkblue;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.nav-link:hover,
+.nav-toggle:hover {
+  color: aliceblue;
+  background-color: cadetblue;
+}
+
+.mobile {
+  display: none;
+}
+
+.current-page {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.hero-section {
+  /*  this is a comment */
+  margin: 10px 2%;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 10px 10px 15px grey;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 1rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.table-section {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+  color: whitesmoke;
+}
+
+caption {
+  background-color: lightgrey;
+}
+
+th {
+  background-color: dimgrey;
+}
+
+tr:nth-child(even) {
+  background-color: slategrey;
+}
+
+tr:nth-child(odd) {
+  background-color: lightslategrey;
+}
+
+td:last-child {
+  width: 10%;
+}
+
+iframe {
+  width: 100%;
+}
+
+.new-h1 {
+  color: red;
+  text-align: left;
+  background-color: aqua;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 600px) {
+  ul {
+    flex-wrap: wrap;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .list-header {
+    width: 90%;
+  }
+
+  .list-toggle {
+    width: 10%;
+  }
+
+  .active .desktop {
+    display: block;
+  }
+}
